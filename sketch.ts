@@ -35,9 +35,9 @@ const sketch = () => {
         const u = count <= 1 ? 0.5 : x / (count - 1);
         const v = count <= 1 ? 0.5 : y / (count - 1);
         const connectU =
-          count <= 1 ? 0.5 : random.rangeFloor(1, count) / (count - 1);
+          count <= 1 ? 0.5 : random.rangeFloor(0, count) / (count - 1);
         const connectV =
-          count <= 1 ? 0.5 : random.rangeFloor(1, count) / (count - 1);
+          count <= 1 ? 0.5 : random.rangeFloor(0, count) / (count - 1);
         points.push({
           position: [u, v],
           connectWith: [connectU, connectV],
