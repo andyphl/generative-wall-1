@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "start": "canvas-sketch sketch.ts --open -- -p [tsify --noImplicitAny]"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "tsify": "^5.0.4",
+    "typescript": "^5.0.3"
+  },
+  "dependencies": {
+    "canvas-sketch": "^0.7.7",
+    "canvas-sketch-util": "^1.10.0",
+    "nice-color-palettes": "^3.0.0"
+  }
+}
