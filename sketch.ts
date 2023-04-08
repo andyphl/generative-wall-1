@@ -77,7 +77,7 @@ const sketch = () => {
         region.lineTo(x, y);
         region.closePath();
 
-        context.fillStyle = color;
+        context.fillStyle = `${color}cc`;
         context.fill(region, "evenodd");
         context.strokeStyle = "white";
         context.lineWidth = 20;
