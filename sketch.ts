@@ -20,7 +20,6 @@ interface Props {
 }
 
 const sketch = () => {
-  const colorCount = random.rangeFloor(1, 6);
   const palette = random.shuffle(random.pick(palettes));
 
   function createGrid(count: number) {
@@ -54,7 +53,7 @@ const sketch = () => {
   const margin = 200;
   const points = createGrid(count);
 
-  return ({ context, width, height, playhead }: Props) => {
+  return ({ context, width, height }: Props) => {
     context.fillStyle = "white";
     context.fillRect(0, 0, width, height);
 
@@ -69,11 +68,6 @@ const sketch = () => {
         const y = lerp(margin, height - margin, v);
         const connectX = lerp(margin, width - margin, connectU);
         const connectY = lerp(margin, height - margin, connectV);
-
-        // context.beginPath();
-        // context.arc(x, y, radius, 0, Math.PI * 2, false);
-        // context.fillStyle = "black";
-        // context.fill();
 
         const region = new Path2D();
         region.moveTo(x, y);
